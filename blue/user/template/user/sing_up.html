@@ -1,0 +1,33 @@
+{% extends "bootstrap/base.html" %}
+
+{% block content %}
+<form action="account/check" method="Post">
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-3">
+            <div class="form-login">
+            <h4>{{ message }}</h4>
+            <input type="text" id="userName" name="username" class="form-control input-sm chat-input" placeholder="username" />
+            </br>
+            <input type="password" id="userPassword1" name="password1" class="form-control input-sm chat-input" placeholder="password" />
+            </br>
+            <input type="password" id="userPassword2" name="password2" class="form-control input-sm chat-input" placeholder="retype pasword" />
+            </br>
+            <div class="wrapper">
+            <span class="group-btn">
+                <button type="submit" name="q1" value="Regi" class="btn btn-primary btn-md">login</button>
+            </span>
+            </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</form>
+
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+{% endblock %}

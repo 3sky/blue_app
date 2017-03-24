@@ -1,0 +1,22 @@
+{% extends "bootstrap/base.html" %}
+
+{% block content %}
+<form action="hello" method="POST">
+<div class="container">
+  <div class="jumbotron">
+    <h1>Welcome</h1>
+    <p>Nice to see you here</p>
+  </div>
+  <div class="span7 text-center">
+    <button class="btn btn-default" type="submit" name="what_to_do" value="singin">SING IN</button>
+    <button class="btn btn-primary" type="submit" name="what_to_do" value="singup">SING UP</button>
+    <button class="btn btn-info" type="submit" name="what_to_do" value="contact">CONTACT</button>
+  </div>
+</div>
+</form>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "bootstrap/base.html" %}
+
+{% block content %}
+<form action="add_data" method="POST">
+<div class="container">
+    <div class="jumbotron">
+        <h1>Hello {{ func }}</h1>
+        <h4>{{ info }}</h4>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-3">
+            <input type="text" id="Temer" name="temperature" class="form-control input-sm chat-input" placeholder="Temperature (℃)" />
+            <input type="text" id="Rain" name="rain" class="form-control input-sm chat-input" placeholder="Rain (mm)" />
+            <input type="text" id="date" name="date" class="form-control input-sm chat-input" placeholder="Date (YYYY-MM-DD)" />
+            <div class="wrapper">
+            <span class="group-btn">
+                <button type="submit" name="adddata" value="save_data" class="btn btn-primary btn-md">Save</button>
+            </span>
+            </div>
+            </div>
+
+        </div>
+</div>
+</form>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+{% endblock %}
+
+
